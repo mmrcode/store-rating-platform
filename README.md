@@ -3,6 +3,10 @@
 A full-stack web application for rating and reviewing stores, built with React and Node.js.
 
 [View Demo](http://localhost:3000/)
+<a href="https://your-demo-link.com" target="_blank">
+  <img src="https://img.shields.io/badge/View-Demo-blue?style=for-the-badge" />
+</a>
+
 ## �� Features
 
 - **User Authentication:** Secure login and registration
