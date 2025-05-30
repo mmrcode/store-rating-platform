@@ -2,6 +2,7 @@
 
 A full-stack web application for rating and reviewing stores, built with React and Node.js.
 
+[View Demo](http://localhost:3000/)
 ## �� Features
 
 - **User Authentication:** Secure login and registration
