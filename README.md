@@ -119,7 +119,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Your Name -Muqsit Raja
- [@twitter](https://twitter.com/mohammadmuqsit_]
+Your Name - [@twitter](https://twitter.com/mohammadmuqsit_)
 
 Project Link: [https://github.com/mmrcode/store-rating-platform](https://github.com/mmrcode/store-rating-platform)
