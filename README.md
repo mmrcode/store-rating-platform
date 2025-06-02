@@ -33,16 +33,45 @@ A full-stack web application for rating and reviewing stores, built with React a
 - Node.js (v14 or higher)
 - PostgreSQL
 - npm or yarn
+- Git
 
 ### Installation
 
 1. Clone the repository:
+
+For Git Bash:
+```bash
+git clone https://github.com/mmrcode/store-rating-platform.git
+cd store-rating-platform
+```
+
+For Windows PowerShell:
+```powershell
+git clone https://github.com/mmrcode/store-rating-platform.git
+cd store-rating-platform
+```
+
+For Linux/Mac Terminal:
 ```bash
 git clone https://github.com/mmrcode/store-rating-platform.git
 cd store-rating-platform
 ```
 
 2. Set up the backend:
+
+For Git Bash:
+```bash
+cd backend
+npm install
+```
+
+For Windows PowerShell:
+```powershell
+cd backend
+npm install
+```
+
+For Linux/Mac Terminal:
 ```bash
 cd backend
 npm install
@@ -63,6 +92,20 @@ LOG_LEVEL=info
 ```
 
 4. Set up the frontend:
+
+For Git Bash:
+```bash
+cd ../frontend
+npm install
+```
+
+For Windows PowerShell:
+```powershell
+cd ../frontend
+npm install
+```
+
+For Linux/Mac Terminal:
 ```bash
 cd ../frontend
 npm install
@@ -71,20 +114,68 @@ npm install
 5. Start the development servers:
 
 For the backend (in one terminal):
+
+Git Bash:
 ```bash
-cd backend
+cd "/c/Users/moham/Desktop/Coding Challenge/backend"
+npm run dev
+```
+
+Windows PowerShell:
+```powershell
+cd "C:\Users\moham\Desktop\Coding Challenge\backend"
+npm run dev
+```
+
+Linux/Mac Terminal:
+```bash
+cd ~/Desktop/Coding\ Challenge/backend
 npm run dev
 ```
 
 For the frontend (in another terminal):
+
+Git Bash:
 ```bash
-cd frontend
+cd "/c/Users/moham/Desktop/Coding Challenge/frontend"
+npm start
+```
+
+Windows PowerShell:
+```powershell
+cd "C:\Users\moham\Desktop\Coding Challenge\frontend"
+npm start
+```
+
+Linux/Mac Terminal:
+```bash
+cd ~/Desktop/Coding\ Challenge/frontend
 npm start
 ```
 
 The application will be available at:
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5000
+
+### Terminal-Specific Notes
+
+#### Git Bash
+- Use forward slashes (/) in paths
+- Use `/c/` instead of `C:\` for Windows drives
+- Use quotes around paths with spaces
+- Example: `cd "/c/Users/moham/Desktop/Coding Challenge"`
+
+#### Windows PowerShell
+- Use backslashes (\) in paths
+- Use quotes around paths with spaces
+- Use semicolons (;) to separate commands
+- Example: `cd "C:\Users\moham\Desktop\Coding Challenge"`
+
+#### Linux/Mac Terminal
+- Use forward slashes (/) in paths
+- Escape spaces with backslash (\)
+- Use `~` for home directory
+- Example: `cd ~/Desktop/Coding\ Challenge`
 
 ## API Endpoints
 
@@ -128,6 +219,30 @@ CREATE DATABASE store_rating_db;
 ```
 3. Make sure your PostgreSQL credentials match the ones in your `.env` file
 
+## Troubleshooting
+
+### Common Issues
+
+1. **Invalid package config error**
+   - Make sure you're in the correct directory
+   - Delete node_modules folder and package-lock.json
+   - Run `npm install` again
+
+2. **Port already in use**
+   - Change the PORT in .env file
+   - Kill the process using the port
+   - Restart your computer
+
+3. **Database connection issues**
+   - Verify PostgreSQL is running
+   - Check database credentials in .env
+   - Ensure database exists
+
+4. **PowerShell path issues**
+   - Use semicolons (;) to separate commands
+   - Use correct path separators (/ or \)
+   - Make sure you're in the right directory
+
 ## Contributing
 
 1. Fork the repository
@@ -142,6 +257,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter)
+Mohammad Muqsit Raja - [@mmrcode](https://github.com/mmrcode)
 
 Project Link: [https://github.com/mmrcode/store-rating-platform](https://github.com/mmrcode/store-rating-platform)
