@@ -56,7 +56,7 @@ Node.js (v14+)
 
 PostgreSQL
 
-npm / yarn
+npm or yarn
 
 Git
 
@@ -111,11 +111,11 @@ Terminal 2: Frontend
 cd frontend
 npm start
 
-The application will be available at:
+App will be available at:
 
 Frontend: http://localhost:3000
 
-Backend API: http://localhost:5000
+Backend: http://localhost:5000
 
 
 
@@ -125,36 +125,24 @@ Backend API: http://localhost:5000
 
 Auth
 
-POST /api/auth/register – Register
-
-POST /api/auth/login – Login
-
-GET /api/auth/me – Current user info
-
+POST   /api/auth/register   → Register
+POST   /api/auth/login      → Login
+GET    /api/auth/me         → Get current user
 
 Stores
 
-GET /api/stores – All stores
-
-GET /api/stores/:id – Store details
-
-POST /api/stores – Create store
-
-PUT /api/stores/:id – Update store
-
-DELETE /api/stores/:id – Delete store
-
+GET    /api/stores          → Get all stores
+GET    /api/stores/:id      → Get store details
+POST   /api/stores          → Create store
+PUT    /api/stores/:id      → Update store
+DELETE /api/stores/:id      → Delete store
 
 Ratings
 
-GET /api/ratings – All ratings
-
-POST /api/ratings – New rating
-
-PUT /api/ratings/:id – Update rating
-
-DELETE /api/ratings/:id – Delete rating
-
+GET    /api/ratings         → Get all ratings
+POST   /api/ratings         → Create rating
+PUT    /api/ratings/:id     → Update rating
+DELETE /api/ratings/:id     → Delete rating
 
 
 ---
@@ -164,7 +152,7 @@ DELETE /api/ratings/:id – Delete rating
 store-rating-platform/
 ├── backend/
 │   ├── src/
-│   └── .env
+│   ├── .env
 │   └── package.json
 ├── frontend/
 │   ├── src/
@@ -185,24 +173,26 @@ store-rating-platform/
 
 CREATE DATABASE store_rating_db;
 
-3. Update your .env file to match your DB credentials
+3. Verify .env file matches your DB credentials
 
 
 
 
 ---
 
-🧩 Troubleshooting Tips
+🧩 Troubleshooting
 
-Common Issues
+Port 3000/5000 already in use
+→ Kill process or change ports in .env
 
-Port Conflicts: Change ports in .env or stop the running process
+Database connection error
+→ Check credentials and that DB is running
 
-DB Errors: Ensure DB is running and credentials match
+Missing node_modules
+→ Run npm install again in the correct directory
 
-Missing node_modules: Run npm install again
-
-Wrong Directory: Always verify using pwd or dir
+Wrong directory errors
+→ Use pwd or dir to check location
 
 
 
@@ -213,31 +203,29 @@ Wrong Directory: Always verify using pwd or dir
 1. Fork the repo
 
 
-2. Create a new branch: git checkout -b feature/YourFeature
+2. Create branch:
 
 
-3. Commit: git commit -m 'Add feature'
 
+git checkout -b
 
-4. Push: git push origin feature/YourFeature
+---
 
+✅ Final Notes
 
-5. Submit a Pull Request
+This project was built with scalability and maintainability in mind, and follows modern best practices across both frontend and backend stacks.
 
+If you're reviewing this as part of a coding challenge or technical assessment, I welcome any feedback. I'm continuously learning and eager to grow as a full-stack developer.
 
+Thank you for your time and consideration!
 
 
 ---
 
-📜 License
-
-This project is licensed under the MIT License.
-
-
----
-
-👤 Author
+👋 Contact
 
 Mohammad Muqsit Raja
-GitHub: @mmrcode
-Project: Store Rating Platform
+🔗 GitHub: @mmrcode
+📨 Email: mohammadmuqsitraja@gmail.com
+
+
