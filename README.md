@@ -1,83 +1,55 @@
-🏬 Store Rating Platform
+# Store Rating Platform
 
-A full-stack web application that enables users to browse, rate, and review local stores. Built with modern web technologies, it ensures a seamless and responsive user experience.
+A full-stack web application for rating and reviewing stores, built with React and Node.js.
 
+## Features
 
----
+- User authentication and authorization
+- Store listings and details
+- Rating and review system
+- User dashboard
+- Responsive design with Material-UI
 
-🚀 Features
+## Tech Stack
 
-🔐 User Authentication (JWT-based)
+### Frontend
+- React
+- Material-UI
+- React Router
+- Axios
+- Formik & Yup
 
-🏪 Store Listing & Detailed Views
+### Backend
+- Node.js
+- Express
+- PostgreSQL
+- Sequelize
+- JWT Authentication
 
-⭐ Rating and Review System
+## Quick Start
 
-👤 User Dashboard
+### Prerequisites
+- Node.js (v14 or higher)
+- PostgreSQL
+- npm or yarn
+- Git
 
-📱 Fully Responsive (Material-UI)
+### Installation
 
-
-
----
-
-🛠 Tech Stack
-
-Frontend
-
-React.js
-
-Material-UI
-
-React Router DOM
-
-Axios
-
-Formik + Yup
-
-
-Backend
-
-Node.js + Express.js
-
-PostgreSQL + Sequelize ORM
-
-JWT Authentication
-
-
-
----
-
-⚙️ Getting Started
-
-📋 Prerequisites
-
-Node.js (v14+)
-
-PostgreSQL
-
-npm or yarn
-
-Git
-
-
-
----
-
-📥 Installation Steps
-
-1. Clone the Repository
-
+1. Clone the repository:
+```bash
 git clone https://github.com/mmrcode/store-rating-platform.git
 cd store-rating-platform
+```
 
-2. Backend Setup
-
+2. Set up the backend:
+```bash
 cd backend
 npm install
+```
 
-Create a .env file inside the backend folder:
-
+3. Create a `.env` file in the backend directory:
+```bash
 PORT=5000
 NODE_ENV=development
 DB_HOST=localhost
@@ -85,147 +57,116 @@ DB_PORT=5432
 DB_NAME=store_rating_db
 DB_USER=postgres
 DB_PASSWORD=postgres
-JWT_SECRET=your_jwt_secret_key
+JWT_SECRET=your_jwt_secret_key_here
 FRONTEND_URL=http://localhost:3000
 LOG_LEVEL=info
+```
 
-3. Frontend Setup
-
+4. Set up the frontend:
+```bash
 cd ../frontend
 npm install
+```
 
+5. Start the development servers:
 
----
-
-▶️ Running the App
-
-Open two terminal windows:
-
-Terminal 1: Backend
-
+Backend (in one terminal):
+```bash
 cd backend
 npm run dev
+```
 
-Terminal 2: Frontend
-
+Frontend (in another terminal):
+```bash
 cd frontend
 npm start
+```
 
-App will be available at:
+The application will be available at:
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:5000
 
-Frontend: http://localhost:3000
+## API Endpoints
 
-Backend: http://localhost:5000
+### Authentication
+- POST /api/auth/register - Register a new user
+- POST /api/auth/login - Login user
+- GET /api/auth/me - Get current user
 
+### Stores
+- GET /api/stores - Get all stores
+- GET /api/stores/:id - Get store details
+- POST /api/stores - Create new store
+- PUT /api/stores/:id - Update store
+- DELETE /api/stores/:id - Delete store
 
+### Ratings
+- GET /api/ratings - Get all ratings
+- POST /api/ratings - Create new rating
+- PUT /api/ratings/:id - Update rating
+- DELETE /api/ratings/:id - Delete rating
 
----
-
-🧪 API Endpoints
-
-Auth
-
-POST   /api/auth/register   → Register
-POST   /api/auth/login      → Login
-GET    /api/auth/me         → Get current user
-
-Stores
-
-GET    /api/stores          → Get all stores
-GET    /api/stores/:id      → Get store details
-POST   /api/stores          → Create store
-PUT    /api/stores/:id      → Update store
-DELETE /api/stores/:id      → Delete store
-
-Ratings
-
-GET    /api/ratings         → Get all ratings
-POST   /api/ratings         → Create rating
-PUT    /api/ratings/:id     → Update rating
-DELETE /api/ratings/:id     → Delete rating
-
-
----
-
-🗂 Project Structure
-
+## Project Structure
+```
 store-rating-platform/
-├── backend/
-│   ├── src/
-│   ├── .env
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   └── package.json
-└── README.md
+├── backend/           # Backend server code
+│   ├── src/          # Source files
+│   ├── .env          # Environment variables
+│   └── package.json  # Backend dependencies
+├── frontend/         # Frontend React application
+│   ├── src/         # Source files
+│   └── package.json # Frontend dependencies
+└── README.md        # Project documentation
+```
 
+## Database Setup
 
----
-
-🛢 Database Setup
-
-1. Ensure PostgreSQL is installed and running
-
-
-2. Create the database:
-
-
-
+1. Install PostgreSQL if you haven't already
+2. Create a new database:
+```sql
 CREATE DATABASE store_rating_db;
+```
+3. Make sure your PostgreSQL credentials match the ones in your `.env` file
 
-3. Verify .env file matches your DB credentials
+## Troubleshooting
 
+### Common Issues
 
+1. **Port Already in Use**
+   - Change the PORT in .env file
+   - Or kill the process using the port:
+     ```bash
+     # Find the process using port 3000
+     netstat -ano | findstr :3000
+     
+     # Stop the process (replace PID with the number from above)
+     taskkill /F /PID <PID>
+     ```
 
+2. **Database Connection Issues**
+   - Verify PostgreSQL is running
+   - Check database credentials in .env
+   - Ensure database exists
 
----
+3. **Invalid package config error**
+   - Make sure you're in the correct directory
+   - Delete node_modules folder and package-lock.json
+   - Run `npm install` again
 
-🧩 Troubleshooting
+## Contributing
 
-Port 3000/5000 already in use
-→ Kill process or change ports in .env
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Database connection error
-→ Check credentials and that DB is running
+## License
 
-Missing node_modules
-→ Run npm install again in the correct directory
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Wrong directory errors
-→ Use pwd or dir to check location
+## Contact
 
+Mohammad Muqsit Raja - [@mmrcode](https://github.com/mmrcode)
 
-
----
-
-🧑‍💻 Contributing
-
-1. Fork the repo
-
-
-2. Create branch:
-
-
-
-git checkout -b
-
----
-
-✅ Final Notes
-
-This project was built with scalability and maintainability in mind, and follows modern best practices across both frontend and backend stacks.
-
-If you're reviewing this as part of a coding challenge or technical assessment, I welcome any feedback. I'm continuously learning and eager to grow as a full-stack developer.
-
-Thank you for your time and consideration!
-
-
----
-
-👋 Contact
-
-Mohammad Muqsit Raja
-🔗 GitHub: @mmrcode
-📨 Email: mohammadmuqsitraja@gmail.com
-
-
+Project Link: [https://github.com/mmrcode/store-rating-platform](https://github.com/mmrcode/store-rating-platform)
